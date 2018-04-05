@@ -6,7 +6,8 @@ var player1 = new playerComponnet()
 
 
 function update(){
-    ctx.drawImage(player1.playerImage,200,200,300,300);
+    player1.update();
+    ctx.drawImage(player1.playerImage,player1.x,player1.y,200,200);
  }
 setInterval(update,40);
 
