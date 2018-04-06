@@ -6,7 +6,7 @@ function playerComponnet(){
     this. y = 100;
     this.spdY= 10;  // player speed
     this.playerImage = new Image(); //player img with src
-    this.playerImage.src = "assets/apple.jpg";
+    this.playerImage.src = "assets/spartan.png";
 
     this.update = function(){
         var parentThis = this;
