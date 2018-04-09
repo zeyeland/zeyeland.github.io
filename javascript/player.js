@@ -1,12 +1,15 @@
 //playerComponnet
 function playerComponnet(){
     this.health;
-    this.x = 100;
-    this.spdX = 10; // player speed
-    this. y = 100;
-    this.spdY= 10;  // player speed
+    this.x = 500; //500;
+    this.spdX = 50; // player speed
+    this.y = 250; //250;
+    this.spdY= 50;  // player speed
     this.playerImage = new Image(); //player img with src
-    this.playerImage.src = "assets/spartan.png";
+    this.playerImage.src = "assets/player_Sprites/Untitled.png";
+
+    //this.playerImage2 = new Image(); //player img with src
+    //this.playerImage2.src = "assets/Untitled.png";
 
     this.update = function(){
         var parentThis = this;
@@ -14,22 +17,47 @@ function playerComponnet(){
             switch (e.keyCode) {
                 case 37:
                     parentThis.x -= parentThis.spdX;
+                    console.log("player left");
+                    offsetX--;
+                    console.log("offsetX = " + offsetX);
+                    slideScreen();
                     break;
                 case 38:
                     parentThis.y -= parentThis.spdY;
+                    console.log("player up");
+                    offsetY--;
+                    console.log("offsetY = " + offsetY);
+                    slideScreen();
                     break;
                 case 39:
                     parentThis.x += parentThis.spdX;
+                    console.log("player right");
+                    offsetX++;
+                    console.log("offsetX = " + offsetX);
+                    slideScreen();
                     break;
                 case 40:
                     parentThis.y += parentThis.spdY;
+                    console.log("player down");
+                    offsetY++;
+                    console.log("offsetY = " + offsetY);
+                    slideScreen();
                     break;
             }//end of switch
         };   //end of document on keydown function 
+        drawPlayer();
+    }//end of update function
 
-    }//end of update 
+    this.getPosition = function(){
+        console.log(this.x + " .. " + this.y);
+        //checkWallCollision();
+        //return (this.x, this.y);
+    }
+} // end of playerComponnet
+
+function drawPlayer(){
+    //ctx.drawImage(player1.playerImage,0,0,100,100,player1.x,player1.y,400,400);
+    ctx.drawImage(player1.playerImage,player1.x,player1.y,50,50);
    
-
     
-
 }
