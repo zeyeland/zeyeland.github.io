@@ -6,10 +6,10 @@ function playerComponnet(){
     this.y = 250; //250;
     this.spdY= 50;  // player speed
     this.playerImage = new Image(); //player img with src
-    this.playerImage.src = "assets/player_Sprites/Untitled.png";
+    this.playerImage.src = "assets/player_Sprites/person-Chill-Right.png";
 
-    //this.playerImage2 = new Image(); //player img with src
-    //this.playerImage2.src = "assets/Untitled.png";
+    this.playerImage2 = new Image(); //player img with src
+    this.playerImage2.src = "assets/player_Sprites/person-Sword-Left.png";
 
     this.update = function(){
         var parentThis = this;
@@ -20,6 +20,7 @@ function playerComponnet(){
                     console.log("player left");
                     offsetX--;
                     console.log("offsetX = " + offsetX);
+                    console.log(player1.getPosition());
                     slideScreen();
                     break;
                 case 38:
@@ -27,6 +28,7 @@ function playerComponnet(){
                     console.log("player up");
                     offsetY--;
                     console.log("offsetY = " + offsetY);
+                    console.log(player1.getPosition());
                     slideScreen();
                     break;
                 case 39:
@@ -34,6 +36,7 @@ function playerComponnet(){
                     console.log("player right");
                     offsetX++;
                     console.log("offsetX = " + offsetX);
+                    console.log(player1.getPosition());
                     slideScreen();
                     break;
                 case 40:
@@ -41,6 +44,7 @@ function playerComponnet(){
                     console.log("player down");
                     offsetY++;
                     console.log("offsetY = " + offsetY);
+                    console.log(player1.getPosition());
                     slideScreen();
                     break;
             }//end of switch
@@ -58,6 +62,7 @@ function playerComponnet(){
 function drawPlayer(){
     //ctx.drawImage(player1.playerImage,0,0,100,100,player1.x,player1.y,400,400);
     ctx.drawImage(player1.playerImage,player1.x,player1.y,50,50);
+    //ctx.drawImage(player1.playerImage2,player1.x,player1.y,50,50);
    
     
 }
