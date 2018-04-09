@@ -16,36 +16,44 @@ function playerComponnet(){
         document.onkeydown = function(e) {
             switch (e.keyCode) {
                 case 37:
+                if(checkWallCollision("left") == false){
                     parentThis.x -= parentThis.spdX;
                     console.log("player left");
                     offsetX--;
                     console.log("offsetX = " + offsetX);
                     console.log(player1.getPosition());
                     slideScreen();
+                }
                     break;
                 case 38:
+                if(checkWallCollision("above") == false){
                     parentThis.y -= parentThis.spdY;
                     console.log("player up");
                     offsetY--;
                     console.log("offsetY = " + offsetY);
                     console.log(player1.getPosition());
                     slideScreen();
+                }
                     break;
                 case 39:
+                if(checkWallCollision("right") == false){
                     parentThis.x += parentThis.spdX;
                     console.log("player right");
                     offsetX++;
                     console.log("offsetX = " + offsetX);
                     console.log(player1.getPosition());
                     slideScreen();
+                }
                     break;
                 case 40:
+                if(checkWallCollision("below") == false){
                     parentThis.y += parentThis.spdY;
                     console.log("player down");
                     offsetY++;
                     console.log("offsetY = " + offsetY);
                     console.log(player1.getPosition());
                     slideScreen();
+                }
                     break;
             }//end of switch
         };   //end of document on keydown function 
