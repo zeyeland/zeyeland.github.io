@@ -2,7 +2,7 @@
 function playerComponnet(){
     this.health;
     this.x = 500; //500;
-    this.spdX = 50; // player speed
+    this.spdX = 25; // player speed
     this.y = 250; //250;
     this.spdY= 50;  // player speed
     this.playerImage = new Image(); //player img with src
