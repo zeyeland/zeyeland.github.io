@@ -94,20 +94,22 @@ function playerComponnet(){
         canvas.onmousedown = function(e){ // have to calculate and process coordniates becasue character sprite is not centered in its origin
             var clickX = event.clientX;
             var clickY = event.clientY;
-
+            console.log("Prepare for the click Cord: " + clickX + " " + clickY);
+            console.log(parentThis.x + "----" + parentThis.y);
             if(clickY < parentThis.y && clickX >= parentThis.x && clickX <= parentThis.x + 50){
                 console.log("Attack UP is successful");
                 parentThis.playerImage.src = "assets/player_Sprites/attacking/attack-Sword-Up.png";
             }
+            console.log(slideCount);
             if(clickY > parentThis.y + 50 && clickX >= parentThis.x && clickX <= parentThis.x + 50){
                 console.log("Attack DOWN is successful");
                 parentThis.playerImage.src = "assets/player_Sprites/attacking/attack-Sword-Down.png";
             }
-            if(clickX < parentThis.x && clickY >= parentThis.y && clickY <= parentThis.y + 50){
+            if(clickX < parentThis.x - (slideCount*50) && clickY >= parentThis.y && clickY <= parentThis.y + 50){
                 console.log("Attack LEFT is successful");
                 parentThis.playerImage.src = "assets/player_Sprites/attacking/attack-Sword-Left.png";
             }
-            if(clickX > parentThis.x + 50 && clickY >= parentThis.y && clickY <= parentThis.y + 50){
+            if(clickX > parentThis.x - (slideCount*50) && clickY >= parentThis.y && clickY <= parentThis.y + 50){
                 console.log("Attack RIGHT is successful");
                 parentThis.playerImage.src = "assets/player_Sprites/attacking/attack-Sword-Right.png";
             }
