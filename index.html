@@ -1,54 +1,49 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
-       <!-- meta data goes here -->
        <meta charset="UTF-8">
-       <title>Complain Dot Com</title>
+       <title>Mighty Duck</title>
+
+       <link rel="stylesheet" type="text/css" href="dist/css/main.css">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-        <h1>HTML5 </h1>
-        <nav>
-            <ul>
-              <li><a href="index.html">Home</a></li>
-              <li><a href="resume.html">Resume</a></li>
-              <li><a href="contact.html">Contact</a></li>
-            </ul>
-          </nav>
-          <h1>Thank You</h1>
-          <img src="img/blackCadilac.png" alt="My Avatar">
-          <p>Step inside one of our new limousines and enjoy the comfort of the plush appointed interior that 
-              includes multiple flat panel TV’s, DVD / CD Player and more. 
-              We are without question Houston’s premier coach bus rental company!
-          </p>
+        <header>
+            <span class="logo">Mighty Duck</span>
+            <a id="toggleMenu">Menu</a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <img id="money" src="img/ChapterOne/Begining/beg1.jpg" alt="My Avatar">
+        <img id="money" src="img/ChapterOne/Begining/beg2.jpg" alt="My Avatar">
+        <img id="money" src="img/ChapterOne/Begining/beg4.jpg" alt="My Avatar">
+
+        <main>
+            <h1>Hello Im Duck</h1>
+            <p>
+                <img class="avatar" src="img/ChapterOne/Begining/beg1.jpg" alt="My Avatar">
+                QuackQuackQuack QuackQuackQuack Quack Quack QuackQuackQuackQuack
+            </p>
+        </main>
+         
         
-          <form action="https://formspree.io/duckchillings22@gmail.com" method="POST">
-            <div>
-                 <input type="hidden" name="_subject" value="New submission!">
-                 <input type="hidden" name="_next" value="https://zeyeland.github.io/thanks.html" />
-            </div>
-
-            <div>
-                    <label for="name">Name</label>
-                    <input id="name" type="text" name="name">
-            </div>
-
-          <div>
-            <label for="email">Email</label>
-            <input id="email" type="text" name="_replyto">  
-          </div>
-
-          
-    <div>
-        <label for="message">Message</label>
-        <textarea id="message" name="message"></textarea>
-    </div>
-
-    <div>
-        <input type="submit" value="Send">
-    </div>
-
-    </form>
-          
-
+        <script>
+            var toggleMenu = document.getElementById('toggleMenu');
+            var nav = document.querySelector('nav');
+            toggleMenu.addEventListener('click', function(){
+                    if(nav.style.display=='block'){
+                        nav.style.display='none';
+                    }else{
+                        nav.style.display='block';
+                    }
+                }
+            );
+        </script>
     </body>
 </html>
